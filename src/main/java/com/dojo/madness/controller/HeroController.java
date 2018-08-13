@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("heroes")
+@RequestMapping("/api/v1/heroes")
 public class HeroController {
 
     private HeroService heroService;

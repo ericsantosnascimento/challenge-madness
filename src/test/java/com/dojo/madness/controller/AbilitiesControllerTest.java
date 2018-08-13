@@ -26,7 +26,7 @@ public class AbilitiesControllerTest {
 
         given()
                 .standaloneSetup(abilityController)
-                .get("abilities")
+                .get("/api/v1/abilities")
                 .then()
                 .statusCode(200)
                 .body(containsString("Sleep Dart"));
@@ -38,7 +38,7 @@ public class AbilitiesControllerTest {
 
         given()
                 .standaloneSetup(abilityController)
-                .get("abilities/1")
+                .get("/api/v1/abilities/1")
                 .then()
                 .statusCode(200)
                 .body(containsString("Biotic Rifle"));

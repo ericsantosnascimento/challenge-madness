@@ -26,7 +26,7 @@ public class HeroResponseControllerTest {
 
         given()
                 .standaloneSetup(heroController)
-                .get("heroes")
+                .get("/api/v1/heroes")
                 .then().statusCode(200)
                 .body(containsString("anton"));
     }
@@ -36,7 +36,7 @@ public class HeroResponseControllerTest {
 
         given()
                 .standaloneSetup(heroController)
-                .get("heroes/1")
+                .get("/api/v1/heroes/1")
                 .then()
                 .statusCode(200)
                 .body(containsString("eric"));
@@ -48,7 +48,7 @@ public class HeroResponseControllerTest {
 
         given()
                 .standaloneSetup(heroController)
-                .get("heroes/1/abilities")
+                .get("/api/v1/heroes/1/abilities")
                 .then()
                 .statusCode(200)
                 .body(containsString("Biotic Rifle"));

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("abilities")
+@RequestMapping("/api/v1/abilities")
 public class AbilityController {
 
     private AbilityService abilityService;
